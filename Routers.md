@@ -10,8 +10,8 @@ A typical network layout will have:
 Remote threats to both the workstations and the servers exist but they will need to be protected in different ways on the network.  
 ##Cisco Hardware
 If the competition has specific networking hardware it will very likely be Cisco. Cisco creates both the hardware and the software for their lines of routers, switches, and firewalls.
-##Access Lists
-There are many different syntaxes that firewalls are written in but almost all of them follow the same paradigm and general arguments. An example acl statement:
+##Defining Firewall/ACL Rules
+There are many different syntaxes that firewalls are written in but almost all of them follow the same paradigm and general arguments. An example acl or firewall statement:
 ~~~
 	<action> <source> <source subnet> <destination> <destination subnet> <protocol> [port]
 ~~~
@@ -26,7 +26,12 @@ Most syntaxes allow some shortcuts to be taken when writing firewall or access c
 ~~~
 Could allow any address to access ssh (tcp port 22 by default) services on the 192.168.2.123 host  
   
-Typically software or appliances that use access lists will assume an implicit deny when allow or permit statements are included but it is never a bad idea to include an explicit 'catch-all' statement at the end of your access list.  
+Most firewall or access list implementations will parse a ruleset top down such that for the ruleset:  
+~~~
+    deny any any
+    permit 192.168.1.0 255.255.255.0 any
+~~~
+The 192.168.1.0 network will still not be able to pass any packets because the 'deny any any' rule is parsed before the permit rule in the list.
 ###Access List Requirements by Role
 ####Workstations
 Workstations often require only basic outbound access to known services but require dynamic ports inbound in order to communicate. For example a windows 7 workstation may need very few exceptions in the firewalls:
