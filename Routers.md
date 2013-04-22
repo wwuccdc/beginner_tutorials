@@ -1,8 +1,8 @@
 #Routers and Firewalls
 ##Network Basics
-I 
-##Network Layout
-A typical network layout will have:
+I  
+##Network Layout  
+A typical network layout will have:  
 * A gateway router and a firewall, these can be seperate or combined appliances or software
 * One or more workstation subnetworks
 * One or more server subnetworks  
