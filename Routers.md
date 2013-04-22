@@ -32,6 +32,20 @@ Most firewall or access list implementations will parse a ruleset top down such 
     permit 192.168.1.0 255.255.255.0 any
 ~~~
 The 192.168.1.0 network will still not be able to pass any packets because the 'deny any any' rule is parsed before the permit rule in the list.
+####Example Cisco ACL
+~~~
+    permit icmp any any
+	!--- Allow all ICMP such as pings from anywhere to anywhere
+    permit tcp 192.168.1.0 255.255.255.0 any eq 80
+    permit tcp 192.168.1.0 255.255.255.0 any eq 443
+	!--- Allow our local network to access any address on ports equal to 80 or 443 for web traffic
+    permit ip 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
+	!--- Allow our local network to access our server network services on any ip protocol
+    permit tcp any 192.168.1.0 255.255.255.0 gt 1023 established
+	!--- Allow traffic from anywhere to our local network on any port greater than 1023 so long as the connection is established
+    deny any any
+	!--- Catch all and deny remaining traffic
+~~~
 ###Access List Requirements by Role
 ####Workstations
 Workstations often require only basic outbound access to known services but require dynamic ports inbound in order to communicate. For example a windows 7 workstation may need very few exceptions in the firewalls:
