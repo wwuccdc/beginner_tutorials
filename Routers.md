@@ -6,7 +6,8 @@ A typical network layout will have:
 * A gateway router and a firewall, these can be seperate or combined appliances or software
 * One or more workstation subnetworks
 * One or more server subnetworks  
-Remote threats to both the workstations and the servers exist but they will need to be protected in different ways on the network. 
+
+Remote threats to both the workstations and the servers exist but they will need to be protected in different ways on the network.  
 ##Cisco Hardware
 If the competition has specific networking hardware it will very likely be Cisco. Cisco creates both the hardware and the software for their lines of routers, switches, and firewalls.
 ##Access Lists
