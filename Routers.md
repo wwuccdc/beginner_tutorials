@@ -15,7 +15,18 @@ Remote threats to both the workstations and the servers exist but they will need
 ##Cisco Hardware
 If the competition has specific networking hardware it will very likely be Cisco. Cisco creates both the hardware and the software for their lines of routers, switches, and firewalls.
 ###Connecting to Cisco Hardware
-Your first connection to a peice of cisco hardware will almost always be done through a rollover cable connected to the ciscos console port and to your computers serial port.
+Your first connection to a peice of cisco hardware will almost always be done through a rollover cable connected to the ciscos console port and to your computers serial port. You will need to use a terminal emulator that can talk over the serial port. Putty and HyperTerminal are both windows programs that will do this. On linux minicom is a good choice. Whatever program you choose some configuration may be nessecary:
+~~~
+    bps (baud)  : 9600
+    Data Bits   : 8
+    Parity      : None
+    Stop Bits   : 1
+    Flow Control: None
+~~~
+For some terminal emulators like minicom, these configuration options may be presented as:
+~~~
+    9600-8N1
+~~~
 ##Defining Firewall/ACL Rules
 There are many different syntaxes that firewalls are written in but almost all of them follow the same paradigm and general arguments. An example acl or firewall statement:
 ~~~
