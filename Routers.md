@@ -3,6 +3,7 @@ Routers allow communication between computer networks. When allowing this commun
 ##Network Basics
 Required knowledge for this section:
 * Basic understanding of the [tcp/ip stack](http://en.wikipedia.org/wiki/Internet_protocol_suite)  
+* Using a command line interface
 
 ##Network Layout  
 A typical network layout will have:  
@@ -13,6 +14,8 @@ A typical network layout will have:
 Remote threats to both the workstations and the servers exist but they will need to be protected in different ways on the network.  
 ##Cisco Hardware
 If the competition has specific networking hardware it will very likely be Cisco. Cisco creates both the hardware and the software for their lines of routers, switches, and firewalls.
+###Connecting to Cisco Hardware
+Your first connection to a peice of cisco hardware will almost always be done through a rollover cable connected to the ciscos console port and to your computers serial port.
 ##Defining Firewall/ACL Rules
 There are many different syntaxes that firewalls are written in but almost all of them follow the same paradigm and general arguments. An example acl or firewall statement:
 ~~~
