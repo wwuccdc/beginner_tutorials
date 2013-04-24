@@ -2,7 +2,7 @@
 Routers allow communication between computer networks. When allowing this communication where one network may be public and out of our control. In this case we would like the router or another peice of hardware or software to protect our network from unwanted traffic that tries to enter the network. Firewalls and some rotuers can inspect network traffic to varying degrees and block malicious or unwanted traffic based on a set of rules. This section will be about configuring a router to correctly forward data and creating a ruleset to be deployed on a firewall or router that will protect the network.
 ##Network Basics
 Required knowledge for this section:
-* Basic understanding of the (tcp/ip stack)[http://en.wikipedia.org/wiki/Internet_protocol_suite]
+* Basic understanding of the (tcp/ip stack)[http://en.wikipedia.org/wiki/Internet_protocol_suite]  
 ##Network Layout  
 A typical network layout will have:  
 * A gateway router and a firewall, these can be seperate or combined appliances or software
