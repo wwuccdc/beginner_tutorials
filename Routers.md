@@ -3,6 +3,7 @@ Routers allow communication between computer networks. When allowing this commun
 ##Network Basics
 Required knowledge for this section:
 * Basic understanding of the (tcp/ip stack)[http://en.wikipedia.org/wiki/Internet_protocol_suite]  
+
 ##Network Layout  
 A typical network layout will have:  
 * A gateway router and a firewall, these can be seperate or combined appliances or software
