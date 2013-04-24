@@ -1,5 +1,5 @@
 #Routers and Firewalls
-Routers allow communication between computer networks. When allowing this communication where one network may be public and out of our control. In this case we would like the router or another peice of hardware or software to protect our network from unwanted traffic that tries to enter the network. Firewalls and some rotuers can inspect network traffic to varying degrees and block malicious or unwanted traffic based on a set of rules. This section will be about configuring a router to correctly forward data and creating a ruleset to be deployed on a firewall or router that will protect the network.
+Routers allow communication between computer networks. In order to access the internet and allow remote hosts to access our services we will be allowing communication to hosts that are public and out of our control. In this case we would like the router or another peice of hardware or software to protect our network from unwanted traffic. Firewalls and some rotuers can inspect network traffic to varying degrees and block malicious or unwanted traffic based on a set of rules. This section will be about configuring a router to correctly forward data and creating a ruleset to be deployed on a firewall or router that will protect the network.
 ##Network Basics
 Required knowledge for this section:
 * Basic understanding of the [tcp/ip stack](http://en.wikipedia.org/wiki/Internet_protocol_suite)  
@@ -26,6 +26,45 @@ Your first connection to a peice of cisco hardware will almost always be done th
 For some terminal emulators like minicom, these configuration options may be presented as:
 ~~~
     9600-8N1
+~~~       
+###Help I Dont Know the Password
+Information on recovering a password for a cisco router can be found [here](http://www.cisco.com/en/US/products/hw/routers/ps259/products_password_recovery09186a0080094675.shtml).
+###Basic Router Configuration
+Hardening an IOS based router is fairly simple but must be done through the command line interface.
+####Securing Access and Creating a Password
+####Disabling Non-essential Services
+Some, but not all, cisco routers and switches have additional services such as a web interface or tftp file transfer options. We will want to make sure all of these are disabled by entering the following commands after successfully logging into the router:
+~~~
+    !turn off possibly exploitable small, non-essential services
+    no service tcp-small-servers
+    no service udp-small-servers
+    no ip finger
+    no service finger !older ios
+    no ip bootp server         i
+    no service pad
+    no boot host
+    no boot network
+    no boot system
+
+    !disable http interface
+    no ip http server
+    no ip http secure-server
+
+    !disable remote loading of config files
+    no service config
+
+    !disable cdp
+    no cdp run !global
+    no cdp advertise-v2
+    no cdb enable !interface
+
+    no ip domain-lookup
+
+    !disable snmp cleartext (and completely actually)
+    no snmp-server community
+    no snmp-server enable traps
+    no snmp-server system-shutdown
+    no snmp-server
 ~~~
 ##Defining Firewall/ACL Rules
 There are many different syntaxes that firewalls are written in but almost all of them follow the same paradigm and general arguments. An example acl or firewall statement:
