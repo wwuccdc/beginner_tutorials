@@ -4,7 +4,7 @@ This section will be about configuring a router to correctly forward data and cr
 Routers allow communication between computer networks. In order to access the internet and allow remote hosts to access our services we will be allowing communication to hosts that are public and out of our control. In this case we would like the router or another piece of hardware or software to protect our network from unwanted traffic. Firewalls and some rotuers can inspect network traffic to varying degrees and block malicious or unwanted traffic based on a set of rules.
 ##Network Basics
 Required knowledge for this section:
-* Basic understanding of the [tcp/ip stack](http://en.wikipedia.org/wiki/Internet_protocol_suite)  
+* Basic understanding of the [TCP/IP stack](http://en.wikipedia.org/wiki/Internet_protocol_suite)  
 * Using a command line interface
 
 ##Network Layout  
@@ -13,11 +13,13 @@ A typical network layout will have:
 * One or more workstation subnetworks
 * One or more server subnetworks  
 
+__//Insert diagram of Network Layout__
+
 Remote threats to both the workstations and the servers exist but they will need to be protected in different ways on the network.  
 ##Cisco Hardware
 If the competition has specific networking hardware it will very likely be Cisco. Cisco creates both the hardware and the software for their lines of routers, switches, and firewalls.
 ###Connecting to Cisco Hardware
-Your first connection to a piece of cisco hardware will almost always be done through a rollover cable connected to the ciscos console port and to your computers serial port. You will need to use a terminal emulator that can talk over the serial port. Putty and HyperTerminal are both windows programs that will do this. On linux minicom is a good choice. Whatever program you choose some configuration may be nessecary:
+Your first connection to a piece of cisco hardware will almost always be done through a rollover cable connected to the cisco's console port and to your computers serial port. You will need to use a terminal emulator that can talk over the serial port. [Putty](http://www.putty.org/) and ~~HyperTerminal~~  __HyperTerminal is no longer part of windows and should not be recommended__ WinRS are both windows programs that will do this. On linux, [minicom](http://en.wikipedia.org/wiki/Minicom) is a good choice. Whatever program you choose some configuration may be nessecary:
 ~~~
     bps (baud)  : 9600
     Data Bits   : 8
@@ -28,12 +30,18 @@ Your first connection to a piece of cisco hardware will almost always be done th
 For some terminal emulators like minicom, these configuration options may be presented as:
 ~~~
     9600-8N1
-~~~       
+~~~
+
+__This makes no sense to me. You need to provide more info on connected wtih the hardware. What would i actually need to do in say Putty to connect to the router?__
+
 ###Help I Dont Know the Password
 Information on recovering a password for a cisco router can be found [here](http://www.cisco.com/en/US/products/hw/routers/ps259/products_password_recovery09186a0080094675.shtml).
 ###Basic Router Configuration
 Hardening an IOS based router is fairly simple but must be done through the command line interface.
 ####Securing Access and Creating a Password
+
+__Missing info__
+
 ####Disabling Non-essential Services
 Some, but not all, cisco routers and switches have additional services such as a web interface or tftp file transfer options. We will want to make sure all of these are disabled by entering the following commands after successfully logging into the router:
 ~~~
@@ -68,6 +76,9 @@ Some, but not all, cisco routers and switches have additional services such as a
     no snmp-server system-shutdown
     no snmp-server
 ~~~
+
+__under line 6, "no ip bootp server 	i". Should the i be there?__
+
 ##Defining Firewall/ACL Rules
 There are many different syntaxes that firewalls are written in but almost all of them follow the same paradigm and general arguments. An example acl or firewall statement:
 ~~~
@@ -112,10 +123,12 @@ Workstations often require only basic outbound access to known services but requ
 	permit <workstation_subnet> any tcp 443
 	deny any any
 ~~~
-Is enough to allow 80,443 (often http and https traffic, including windows update for security updates!) out from the workstation computers but will not allow any malicious program on the workstations to reach out on another port. The workstations will use these open ports for outbound web traffic however we also need to allow traffic to return to the computers so that web pages can actually be loaded. Traffic comes back from the servers on dynamic ports so we can't simply say "let 80 and 443 flow both ways", instead the firewall or router can examine a TCP stream and decide if it is "established" meaning traffic is already moving in at least one direction (because we have no rules allowing traffic in yet, this means we must have started the connection) and add an inbound rule along the following lines:
+The above example would allow traffic on ports 80 & 443 (often http and https traffic, including windows update for security updates!) out from the workstation computers but will not allow any malicious program on the workstations to reach out on another port. The workstations will use these open ports for outbound web traffic, however, we also need to allow traffic to return to the computers so that web pages can actually be loaded. Traffic comes back from the servers on dynamic ports so we can't simply say "let 80 and 443 flow both ways", instead the firewall or router can examine a TCP stream and decide if it is "established" meaning traffic is already moving in at least one direction (because we have no rules allowing traffic in yet, this means we must have started the connection) and add an inbound rule along the following lines:
 ~~~
 	permit any <workstation_subnet> tcp established
 	deny any any
 ~~~
 This allows any tcp traffic on any port that is an established stream to be forwarded to the workstation computers, this is ideal because we can now browse the web but are protected from malicious programs trying to start connections on other ports and from many possible vulnerabilities that may still be open on each workstation.
 ##Firewall Software
+
+__Missing info__
