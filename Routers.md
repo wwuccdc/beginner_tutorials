@@ -164,7 +164,7 @@ Some of the possible open source software you may run into includes:
 
 Some of these are configured through the command line and some of them are configured through a gui but the concept of ACLs remains the same on each of the ones listed. There will be a list rules that each packet is checked against in descending order, the first rule that matches is used to decide what to do with each packet. Below we will use IPFilter on our Ubuntu VM to demonstrate a very simple configuration.
 
-##Example
+##Exercise
 Start the unix vm called ccdc-firewalls.
 Once your vm is up you should be able to browse to its IP address on your host computer and view a webpage, you will know if it's working.  
 On the VM you can edit the IPFilter configuration file stored at:
