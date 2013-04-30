@@ -31,6 +31,7 @@ In order to view more information on each file you can add the -la flags to ls
 ~~~
     ls -la
 ~~~
+##Basic Commands and Information
 ####Directory Structure
 From the root directory a number of directories or files will be visible
 ~~~
