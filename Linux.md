@@ -34,18 +34,12 @@ In order to view more information on each file you can add the -la flags to ls
 ####Directory Structure
 From the root directory a number of directories or files will be visible
 ~~~
-    /dev
-    /root
-    /bin
-    /sbin
-    /home
-    /etc
-    /lib
-    /mnt
-    /opt
-    /usr
-    /var
-    /tmp
+    /dev	/root
+    /bin	/sbin
+    /home	/etc
+    /lib	/mnt
+    /opt	/usr
+    /var	/tmp
 ~~~
 ####Some common directories
 ####/root
@@ -60,22 +54,45 @@ Contains binary files like bin but is used for system binaries
 Pronounced et-see, holds configuration files for many system functions and installed applications. For instance /etc/motd holds the motd information that is displayed on user login.
 ####/tmp
 A temporary directory for (you guessed it) temporary files. A common trick is to store malware files in this folder to avoid detection.
-####Making new directories
+###Making new directories
 The command is simply mkdir:
 ~~~
     mkdir <newdirectory>
 ~~~
-####Removing files and folders
+###(Re)moving files and folders
+Removing files
 ~~~
     rm <filename>
     rm -r <directory>
 ~~~
+Copying files
+~~~
+    cp <filename> <destination>
+~~~
+###Viewing files
+cat will output the full file to your terminal, less will output a scrollable view of the file to the terminal
+~~~
+    cat <filename>
+    less <filename>
+~~~
+###Using Man pages and Apropros
+You may find yourself in a place where you don't know how to use a command or maybe even which command to use. This is when man or apropros can be very useful. Issuing the command:
+~~~
+   man <command>
+~~~
+Will give you all possible information about the command entered. If you have forgotten a command like cp, typing:
+~~~
+    apropros copy
+~~~
+will return man pages that have copy in the header and will help you find the correct command to use.  
+Many of the above commands will only work with sudo when changing important root-owned files
 ###Using sudo
 If you are listed in the sudoers file or are part of the sudoers group you may have access to a special command called sudo. The command allows you to execute another command as a superuser.
 ~~~
     sudo shutdown -r now
 ~~~
 Allows you to run the shutdown command even through you are not root, this will be very useful as many commands require root privileges to work.
+
 ###Exercise
 We will be using the commands we learned above to install a simple command line text editor into our ubutnu system and use it to edit a file on our system.  
 Start by logging in to the system
