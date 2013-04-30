@@ -88,6 +88,16 @@ If you are listed in the sudoers file or are part of the sudoers group you may h
 ~~~
 Allows you to run the shutdown command even through you are not root, this will be very useful as many commands require root privileges to work.
 
+###Connecting to Other Linux Machines
+Using SSH you can connect to other linux machines. The syntax is very simple:
+~~~
+    ssh <username>@<target>
+~~~
+You will be presented with a password prompt and able to use the connection just like a local terminal.
+
+##Other Resources
+This information will get you started on the remaining tutorials but is far from comprehensive. For more indepth and complete linux tutorials [this](http://www.ee.surrey.ac.uk/Teaching/Unix/) is a good resource.
+
 ##Exercise
 We will be using the commands we learned above to install a simple command line text editor into our ubutnu system and use it to edit a file on our system.  
 Start by logging in to the system
