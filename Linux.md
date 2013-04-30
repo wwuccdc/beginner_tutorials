@@ -42,18 +42,12 @@ From the root directory a number of directories or files will be visible
     /var	/tmp
 ~~~
 ####Some common directories
-####/root
-root's (the system administrator account) home directory, this will look empty to anyone who is not root
-####/bin
-Contains binary files (programs) that can be run by users
-####/sbin
-Contains binary files like bin but is used for system binaries
-####/home
-/home holds user directories for instance if your username is ccdc your home directory would be /home/ccdc (you can ccdc to that!)
-####/etc
-Pronounced et-see, holds configuration files for many system functions and installed applications. For instance /etc/motd holds the motd information that is displayed on user login.
-####/tmp
-A temporary directory for (you guessed it) temporary files. A common trick is to store malware files in this folder to avoid detection.
+__/root:__ the system administrator account home directory, this will look empty to anyone who is not root
+__/bin:__ Contains binary files (programs) that can be run by users
+/sbin: Contains binary files like bin but is used for system binaries
+__/home:__ holds user directories for instance if your username is ccdc your home directory would be /home/ccdc (you can ccdc to that!)
+__/etc:__ Pronounced et-see, holds configuration files for many system functions and installed applications. For instance /etc/motd holds the motd information that is displayed on user login.
+__/tmp:__ A temporary directory for (you guessed it) temporary files. A common trick is to store malware files in this folder to avoid detection.
 ###Making new directories
 The command is simply mkdir:
 ~~~
@@ -93,7 +87,7 @@ If you are listed in the sudoers file or are part of the sudoers group you may h
 ~~~
 Allows you to run the shutdown command even through you are not root, this will be very useful as many commands require root privileges to work.
 
-###Exercise
+##Exercise
 We will be using the commands we learned above to install a simple command line text editor into our ubutnu system and use it to edit a file on our system.  
 Start by logging in to the system
 Vim is a very common and powerful editor and will most likely be installed on any system you're likely to run into. It is, however, not the easiest command line editor to use so we will be downloading and installing nano. If you would like to learn more about vim or vi style editors check [here](http://www.vim.org/) We will start by using sudo apt-get update to get the latest software information. Then we will use apt-get to install nano.
