@@ -79,7 +79,7 @@ Allows you to run the shutdown command even through you are not root, this will 
 ###Exercise
 We will be using the commands we learned above to install a simple command line text editor into our ubutnu system and use it to edit a file on our system.  
 Start by logging in to the system
-Vim is a very common and powerful editor and will most likely be installed on any system you're likely to run into. It is, however, not the easiest command line editor to use so we will be downloading and installing nano. If you would like to learn more about vim or vi style editors check [here](link!) We will start by using sudo apt-get update to get the latest software information. Then we will use apt-get to install nano.
+Vim is a very common and powerful editor and will most likely be installed on any system you're likely to run into. It is, however, not the easiest command line editor to use so we will be downloading and installing nano. If you would like to learn more about vim or vi style editors check [here](http://www.vim.org/) We will start by using sudo apt-get update to get the latest software information. Then we will use apt-get to install nano.
 ~~~
     sudo apt-get update
     sudo apt-get install nano
