@@ -42,12 +42,13 @@ From the root directory a number of directories or files will be visible
     /var	/tmp
 ~~~
 ####Some common directories
-__/root:__ the system administrator account home directory, this will look empty to anyone who is not root
-__/bin:__ Contains binary files (programs) that can be run by users
-/sbin: Contains binary files like bin but is used for system binaries
-__/home:__ holds user directories for instance if your username is ccdc your home directory would be /home/ccdc (you can ccdc to that!)
-__/etc:__ Pronounced et-see, holds configuration files for many system functions and installed applications. For instance /etc/motd holds the motd information that is displayed on user login.
-__/tmp:__ A temporary directory for (you guessed it) temporary files. A common trick is to store malware files in this folder to avoid detection.
+__/root:__ the system administrator account home directory, this will look empty to anyone who is not root  
+__/bin:__ Contains binary files (programs) that can be run by users  
+__/sbin:__ Contains binary files like bin but is used for system binaries  
+__/home:__ holds user directories for instance if your username is ccdc your home directory would be /home/ccdc (you can ccdc to that!)  
+__/etc:__ Pronounced et-see, holds configuration files for many system functions and installed applications. For instance /etc/motd holds the motd information that is displayed on user login.  
+__/tmp:__ A temporary directory for (you guessed it) temporary files. A common trick is to store malware files in this folder to avoid detection.  
+
 ###Making new directories
 The command is simply mkdir:
 ~~~
