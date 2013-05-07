@@ -1,3 +1,4 @@
+Add implicit deny ufw
 Notes: Maybe having pen testing first would be more interesting, get them into the mindset and such
  
 1) Windows Server
