@@ -11,7 +11,6 @@ Notes: Maybe having pen testing first would be more interesting, get them into t
 * SSH Security
 * Basic Unix Security
 * Kerberos Authentication
-* Basic LAMP
 * Updating software
 * Looking for malicious software
 3) Router / Firewall
