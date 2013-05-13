@@ -8,7 +8,8 @@ User information is typically stored in two places
 	/etc/passwd
 	/etc/shadow
 ~~~
-The passwd file stores user information including name, uid (a unique identefier for each user) and home directory while the shadow file stores an copy of the encrypted password for that user.  
+The passwd file stores user information including name, uid (a unique identefier for each user) and home directory while the shadow file stores an copy of the encrypted password for that user.
+Learn more about why the shadow copyies exist [here](http://en.wikipedia.org/wiki/Passwd#Shadow_file)
 ####Useful Commands
 * __su [username]__ : when passed a username will attempt to switch to that user, requiring the new users password. When entered without a user will attempt to switch to the root user.
 * __whoami___ : prints your current username
@@ -16,6 +17,8 @@ The passwd file stores user information including name, uid (a unique identefier
 
 ##Groups
 In addition to assigned permissions based on users, unix systems can assign permissions based on groups which apply to all members of the group.
+%%%%%% Include more info, such as example groups Sudoers, etc.
+%%%%%% Including info on how to remove, add to sudoers is also nice. maybe just a link would be okay? You decide. Wait, does sudoers even count as a group?
 ####Group Information
 Group information is stored in
 ~~~
@@ -23,7 +26,7 @@ Group information is stored in
 ~~~
 But a primary group is also listed in the passwd file for each user. Users can be members of any number of groups.
 ####Useful Commands
-To find all the groups that a given user is part of first find their uid by looking in the passwd file and then use the command
+To find all the groups that a given user is part of, first find their uid by looking in the passwd file and then use the command
 ~~~
 	groups [uid]
 ~~~
@@ -67,7 +70,7 @@ is a fine and secure idea. Many times we will be working with files that need to
 would suffice.
 ##Software
 ####Keeping everything up to date
-This will require different commands based on any number of package managers available but some of the common ones are apt-get, yum, and ports. For our example apt-get is the package manager installed. To update the software list and use the new information to install available upgrades use the following commands:
+This will require different commands based on any number of package managers available but some of the common ones are apt-get, yum, pacman, and ports. For our example apt-get is the package manager installed. To update the software list and use the new information to install available upgrades use the following commands:
 ~~~
 	sudo apt-get update
 	sudo apt-get upgrade
@@ -82,7 +85,7 @@ Then, depending on the result, services can be stopped with the command
 ~~~
 	sudo service <service> stop
 ~~~
-or softare can be completely uninstalled with the command
+or software can be completely uninstalled with the command
 ~~~
 	sudo apt-get purge <software>
 ~~~
@@ -137,3 +140,5 @@ This is very specific to this system. Typically a key based approach will actual
 ##Exercise
 __Todo__
 Log in with provided (download through web vuln) public authentication key even though there is no known user. Then secure ssh to prevent this from happening.
+
+%%%%%% %%%%%% Will there be a section on kerberos?
