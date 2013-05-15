@@ -1,4 +1,4 @@
-#Unix Security
+#Unix Security [ETC: 2 hours]
 ##Users
 ####Root
 Root is the super user with a uid of 0, this user has all privileges but will rarely be used in a secure unix enviroment.
