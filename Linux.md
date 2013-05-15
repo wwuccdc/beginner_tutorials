@@ -1,4 +1,4 @@
-#Basic Linux
+#Basic Linux [ETC: 20mins]
 ##First Steps
 ###Logging in
 You should be prompted for a username and password. In our example the username is ccdc and the password is cdcc (ccdc reversed)
