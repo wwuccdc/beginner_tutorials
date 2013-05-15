@@ -1,4 +1,4 @@
-#Routers and Firewalls
+#Routers and Firewalls [ETC: 1.5 Hours]
 This section will be about configuring a router to correctly forward data and creating a ruleset to be deployed on a firewall or router that will protect the network.
 
 Routers allow communication between computer networks. In order to access the internet and allow remote hosts to access our services we will be allowing communication to hosts that are public and out of our control. In this case we would like the router or another piece of hardware or software to protect our network from unwanted traffic. Firewalls and some rotuers can inspect network traffic to varying degrees and block malicious or unwanted traffic based on a set of rules.
