@@ -1,4 +1,4 @@
-#Windows Server
+#Windows Server [ETC: 45 minutes]
 In this example we will be talking about Windows Server 2008 R3 but the neccesary steps to harden any windows servers will be similar.
 
 This tutorial assumes basic understanding of Windows operating systems. 
@@ -7,7 +7,7 @@ This tutorial assumes basic understanding of Windows operating systems.
 Probably the single most important part of securing a windows server setup is updating the to most recent patches. Windows Update can be configured and started by going to:
 ~~~
 	Start > Control Panel > Windows Updatees
-~~~
+~~~
 ##Windows Firewall
 Minimizing the attack surface on a Windows server is arguably even more important than on any other system. Windows systems are the target of many malware and exploit developers and are especially prone to fall to common attacks due to misconfiguration and extraneous services being run, unprotected, on the server. Windows Firewall can help prevent this even if you have a border firewall, attacks can originate from compromised machines from within your own network.  
 
@@ -31,4 +31,6 @@ Switch to the inbound rules and make sure everything is disabled. (Ctrl-a, __Dis
 Switch to the outbound rules and do the same.
 We will now create and enable a new rule to allow windows update to function. Still in outbound rules click __New rule__ and chose __Port__ in the first dialog. The connection we are trying to allow is tcp on ports "80, 443" The next dialog will ask how you would like to handle the connection, choose __Allow the connection__, we do not choose Allow the connection if it is secure because windows update transmits some non-confidential data in an unsecure manner which we still need to patch the server. Name and create the rules and windows update should be able to communicate with microsoft servers.
 ###Configuration for Other Services
-For the most part these configurations will allow services like IIS and standalone servers to communicate with clients. These changes will be added to the inbound rule list. For exaomple to allow remote desktop protocol through we will open port tcp 3389 inbound.
+For the most part these configurations will allow services like IIS and standalone servers to communicate with clients. These changes will be added to the inbound rule list. For example, to allow remote desktop protocol through we will open port tcp 3389 inbound.
+
+%%% Idea: Include some pictures? Possible powershell commands, etc?
