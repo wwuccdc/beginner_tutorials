@@ -34,3 +34,4 @@ We will now create and enable a new rule to allow windows update to function. St
 For the most part these configurations will allow services like IIS and standalone servers to communicate with clients. These changes will be added to the inbound rule list. For example, to allow remote desktop protocol through we will open port tcp 3389 inbound.
 
 %%% Idea: Include some pictures? Possible powershell commands, etc?
+.

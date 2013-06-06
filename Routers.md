@@ -180,3 +180,4 @@ Issuing the command service ipfilter restart will reload the configuration files
 	service ipfilter restart
 ~~~
 This blocks any requests on port 80 tcp going in or out. When you try to navigate to the page that worked earlier you should see that it infact is now blocked!
+.

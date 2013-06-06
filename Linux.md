@@ -124,3 +124,4 @@ use sudo nano to edit the nanorc file
     sudo nano nanorc
 ~~~
 delete the line 'set nowrap' and press ctrl-x to write the buffer and exit
+.

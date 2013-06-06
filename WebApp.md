@@ -107,3 +107,4 @@ Using a technique described above (or one found here: http://www.unixwiz.net/tec
 ### Additional exercise
 Now that you can login it is possible to fake a login AND exploit an XSS vulnerability in the page. If you need a hint, look at the output after you login.
 (Clean up this exercise, the output is "Welcome " . $_POST['username'];, should be straightforward)
+.
