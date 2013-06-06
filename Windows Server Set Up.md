@@ -1,4 +1,4 @@
-#Windows Server [ETC: XXmins]
+#Windows Server [ETC: 2.5 Hours]
 ##Introduction
 ###Overview
 In this module, you will learn how to setup active directory, remote authentication, IIS, File sharing and remote access on Windows Server 2008, 2008 R2 or 2012. The virtual machines for the tutorials will be running Windows Server 2008 R2. Changes in Windows Server 2012 for installation are mostly graphical updates and simplification. Steps should mostly be the same. 
