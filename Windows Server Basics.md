@@ -7,7 +7,7 @@ This tutorial assumes basic understanding of Windows operating systems.
 Probably the single most important part of securing a windows server setup is updating the to most recent patches. Windows Update can be configured and started by going to:
 ~~~
 	Start > Control Panel > Windows Updatees
-~~~
+~~~
 ##Windows Firewall
 Minimizing the attack surface on a Windows server is arguably even more important than on any other system. Windows systems are the target of many malware and exploit developers and are especially prone to fall to common attacks due to misconfiguration and extraneous services being run, unprotected, on the server. Windows Firewall can help prevent this even if you have a border firewall, attacks can originate from compromised machines from within your own network.  
 

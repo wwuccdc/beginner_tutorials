@@ -49,16 +49,6 @@ You will have to login using the Domain Administrator account - the same user an
 user name:
 CCDCDOMAIN\administrator
 ~~~
-###Remote Authentication with Active Directory
-Setting up Remote Authentication is easy. You begin just as with setting up Active Directory.
-~~~
-Start the __Add Roles Wizard__
-In the list of server roles, select __Network Policy and Access Services___.
-Click __Next__ twice.
-In the list of role services, select __Routing and Remote Access Services__. This will select all the roles for Routing and Remote Access Services.
-Proceed through the steps in the Add Roles Wizard to complete the installation.
-~~~
-Configuring __Remote Access__ is a lot of work. Please refer to this [_comprehensive_ guide](http://www.buchatech.com/2010/06/how-to-setup-vpn-access-on-server-2008/) for instructions.
 ###Remote Access
 How that you have Active Directory set up, how do you add users?
 #####Adding users to Active Directory
@@ -72,7 +62,7 @@ Active Directory Users and Computers/domain name/folder
 Go to __New__ then click __User__.
 Customize the user to how you want it.
 
-#####Creating user groups 
+####Creating user groups 
 Go to __New__ then click __Group__.
 In the __New Object - Group__ dialog, type in the name of the new group.
 
@@ -80,7 +70,7 @@ Choose whether you want the Group to be local to the domain, global or universal
 
 Click __OK__.
 
-#####Adding users to groups 
+####Adding users to groups 
 To Assign a user to a group, double-click the folder that contains the group you want to add the user to in the left hand side details pane.
 
 In the details pane, right-click the group you want to add a user to, click __Properties__ and in the group __Properties__ dialog box that opens, click the __Members__ tab.
@@ -90,6 +80,16 @@ On the __Members Tab__, click __Add__.
 Enter the name of the user, group or computer, and click __OK__.
 Continue to do this for other members.
 
+###Remote Authentication with Active Directory
+Setting up Remote Authentication is easy. You begin just as with setting up Active Directory.
+~~~
+Start the __Add Roles Wizard__
+In the list of server roles, select __Network Policy and Access Services___.
+Click __Next__ twice.
+In the list of role services, select __Routing and Remote Access Services__. This will select all the roles for Routing and Remote Access Services.
+Proceed through the steps in the Add Roles Wizard to complete the installation.
+~~~
+Configuring __Remote Access__ is a lot of work. Please refer to this [_comprehensive_ guide](http://www.buchatech.com/2010/06/how-to-setup-vpn-access-on-server-2008/) for instructions.
 ###File Sharing
 Sharing files to others on the network is simple.
 ~~~
