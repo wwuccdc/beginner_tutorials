@@ -61,10 +61,10 @@ In the list of role services, select __Routing and Remote Access Services__. Thi
 Proceed through the steps in the Add Roles Wizard to complete the installation.
 ~~~
 
-Configuring __Remote Access__ is a lot of work. Please refer to this [_comprehensive_ guide](http://www.windowsecurity.com/articles-tutorials/authentication_and_encryption/Configuring-Windows-Server-2008-Remote-Access-SSL-VPN-Server-Part1.html) for instructions.
+Configuring __Remote Access__ is a lot of work. Please refer to this [_comprehensive_ guide](http://www.buchatech.com/2010/06/how-to-setup-vpn-access-on-server-2008/) for instructions.
 
 ###File Sharing
 
 ###Remote Access
-
+######TEST
 ###Learning
