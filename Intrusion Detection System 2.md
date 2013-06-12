@@ -1,4 +1,4 @@
-#Intrusion Detection [ETC: XX Hours]
+#Intrusion Detection [ETC: 45 Minutes]
 ##Introduction
 ###Overview
 In this module, we will be learning and using Snort, a free an open source network intrusion prevention system and network intrusion detection system. The set-up of snort is difficult and you should have a good understanding of linux package installations, file locations, etc. before you begin.
