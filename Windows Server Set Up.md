@@ -138,15 +138,15 @@ Enable Windows auditing - enabling Windows auditing will make it easier to backt
 Group Policy allows you to implment specific configurations for users and computers. Policies are linked to active directory containers such as sites, domains, or organizational units. 
 
 There are around 9 types of Group Policy security features, they are
-*Account Policies
-*Local Policies
-*Event Log
-*Restricted Groups
-*System Services
-*Registry
-*File System
-*Public Key Policies
-*Internet Protocol Seucirty Policies on Active Directory
+* Account Policies
+* Local Policies
+* Event Log
+* Restricted Groups
+* System Services
+* Registry
+* File System
+* Public Key Policies
+* Internet Protocol Seucirty Policies on Active Directory
 
 ####Account Policies
 Group policy account policies can be used to specify a Password Policy, allowing you to specify password requirements, such as complexity, length and life of password. Included among Password Policy is Account Lockout Policy, enabling you to lock out a user after a specified number of failed logon attempts - securing against bruteforcing of user logins. Kerberos Authentication Policy can also be modified to set the maximum lifetime of a user ticket.
