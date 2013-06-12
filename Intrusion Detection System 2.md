@@ -67,6 +67,7 @@ Rule Structure and Example
     </tr>
     <tr>
     	<td><b>Example</b></td>
+        <td>alert</td>
     	<td>icmp</td>
     	<td>any</td>
     	<td>any</td>
