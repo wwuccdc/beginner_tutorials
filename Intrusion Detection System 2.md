@@ -105,7 +105,8 @@ To make Snort run as a Daemon, add -D parameter.
 # snort -D -c /etc/snort/snort.conf -l /var/log/snort/
 ~~~
 
-
+While Snort itself will not automatically block intrusions, plugins are avaliable to do so. Please note that setting up rules and such will take hours and is a delicate task.
+You can learn more about the SnortSAM plugin [here](http://www.snortsam.net/).
 
 
 
