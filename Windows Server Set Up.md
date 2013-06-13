@@ -11,34 +11,34 @@ Remote Authentication allows for a user outside of immediate Intranet to authent
 ##Modules
 ###Active Directory
 To set up Active Directory:
-~~~
-Start __Server manager__ from the task bar. 
-In the left navigation bar, navigate to the __Server Roles__ tab and click on the __"Add Roles"__ button.
-Click Next when the Add Role Wizard opens up.
-The Wizard will display a list of Roles. From the List, choose __Active Directory Domain Services__.
-~~~
+
+* Start __Server manager__ from the task bar. 
+* In the left navigation bar, navigate to the __Server Roles__ tab and click on the __"Add Roles"__ button.
+* Click Next when the Add Role Wizard opens up.
+* The Wizard will display a list of Roles. From the List, choose __Active Directory Domain Services__.
+
 You will be notified that additional roles are required for Active Directory Domain Services to be installed. 
-~~~
-Click on __Add Requested Features__.
-~~~
+
+* Click on __Add Requested Features__.
+
 Active directory will now be installed. However, it is not configured yet. A warning in Server Manager will display (X) Active Directory Domain Services. 
-~~~
-Click on __(X) Active Directory Domain Services__. From Server Manager.
-~~~
+
+* Click on __(X) Active Directory Domain Services__. From Server Manager.
+
 In the Summary of Active Directory Domain Services,
-~~~
-Click on __Run the Active Directory Domain Services Installation Wizard (dcpromo.exe)__.
-_Alternatively, you may use WinKey + R and type dcpromo.exe followed by the enter key to run the wizard_
-~~~
+
+* Click on __Run the Active Directory Domain Services Installation Wizard (dcpromo.exe)__.
+* _Alternatively, you may use WinKey + R and type dcpromo.exe followed by the enter key to run the wizard_
+
 For the purpose of CCDC, we will be creating a new domain in a new forest.
-~~~
-Clicking __Next__, navigate to __Choose a Deployment Configuration__ and select the __Create a new domain in a new forest__ radial button.
-Type in the domain name for ccdc (refer to the network diagram)
-~~~
-Click next until you reach __Additional Domain Controller Options__
-~~~
-Check __DNS server__. For the purpose of CCDC, this Windows Server machine will have two roles. Active Directory and Primary DNS.
-~~~
+
+* Clicking __Next__, navigate to __Choose a Deployment Configuration__ and select the __Create a new domain in a new forest__ radial button.
+* Type in the domain name for ccdc (refer to the network diagram)
+
+* Click next until you reach __Additional Domain Controller Options__
+
+* Check __DNS server__. For the purpose of CCDC, this Windows Server machine will have two roles. Active Directory and Primary DNS.
+
 Continue through Wizard. Note that __Restore mode Administrator account__ is an additional account created that is used for recovery.
 
 Reboot.
@@ -52,59 +52,59 @@ CCDCDOMAIN\administrator
 ###Remote Access
 How that you have Active Directory set up, how do you add users?
 #####Adding users to Active Directory
-Click __Start__ > __Administrative Tools__ > __Active Directory Users and Computers__.
-Click on the domain name specified during setup from above.
+* Click __Start__ > __Administrative Tools__ > __Active Directory Users and Computers__.
+* Click on the domain name specified during setup from above.
 
-In the details pane, right-click the folder in which you want to add a user account.
+* In the details pane, right-click the folder in which you want to add a user account.
 ~~~
 Active Directory Users and Computers/domain name/folder
 ~~~
-Go to __New__ then click __User__.
+* Go to __New__ then click __User__.
 Customize the user to how you want it.
 
 ####Creating user groups 
-Go to __New__ then click __Group__.
-In the __New Object - Group__ dialog, type in the name of the new group.
-
-Choose whether you want the Group to be local to the domain, global or universal and also the group type - Security or Distribution. (We mostly only use Security).
-
-Click __OK__.
+* Go to __New__ then click __Group__.
+* In the __New Object - Group__ dialog, type in the name of the new group.
+* Choose whether you want the Group to be local to the domain, global or universal and also the group type - Security or Distribution. (We mostly only use Security).
+* Click __OK__.
 
 ####Adding users to groups 
 To Assign a user to a group, double-click the folder that contains the group you want to add the user to in the left hand side details pane.
 
-In the details pane, right-click the group you want to add a user to, click __Properties__ and in the group __Properties__ dialog box that opens, click the __Members__ tab.
+In the details pane, 
+* Right-click the group you want to add a user to
+* Click __Properties__ and in the group __Properties__ dialog box that opens
+* Click the __Members__ tab.
+* On the __Members Tab__, click __Add__.
+* Enter the name of the user, group or computer, and click __OK__.
 
-On the __Members Tab__, click __Add__.
-
-Enter the name of the user, group or computer, and click __OK__.
 Continue to do this for other members.
 
 ###Remote Authentication with Active Directory
 Setting up Remote Authentication is easy. You begin just as with setting up Active Directory.
-~~~
-Start the __Add Roles Wizard__
-In the list of server roles, select __Network Policy and Access Services___.
-Click __Next__ twice.
-In the list of role services, select __Routing and Remote Access Services__. This will select all the roles for Routing and Remote Access Services.
+
+* Start the __Add Roles Wizard__
+* In the list of server roles, select __Network Policy and Access Services___.
+* Click __Next__ twice.
+* In the list of role services, select __Routing and Remote Access Services__. This will select all the roles for Routing and Remote Access Services.
 Proceed through the steps in the Add Roles Wizard to complete the installation.
-~~~
+
 Configuring __Remote Access__ is a lot of work. Please refer to this [_comprehensive_ guide](http://www.buchatech.com/2010/06/how-to-setup-vpn-access-on-server-2008/) for instructions.
 ###File Sharing
 Sharing files to others on the network is simple.
-~~~
-Right Click the folder you would like to share.
-Properties > Sharing > Share...
-~~~
+
+* Right Click the folder you would like to share.
+* Properties > Sharing > Share...
+
 The File Sharing dialog box will open. Specify who you would like to share this folder with. You may add a user or user group. Typing in Everyone will enable access for all local users. 
-~~~
-Click __Share__
-~~~
+
+* Click __Share__
+
 You have just specified which users will have access to the folder. We will now specify _Share Permissions_ and a _Share Name_ by which the folder will be referenced and accessed by users on the network.
-~~~
-Click __Advanced Sharing__.
-Check __Share this folder__.
-~~~
+
+* Click __Advanced Sharing__.
+* Check __Share this folder__.
+
 By default, the name of the folder will be used as the Share name. Feel free to change it as you please.
 If the number of concurrent users accessing the shared folder is a concern, modify the number of simultaneous users accordingly.
 
@@ -118,12 +118,10 @@ READ - Grants users permission to read and execute files and view and access fil
 ~~~
 Note that Permissions are cumulative in that the user will inherit the permissions of the groups the user is a member of. However, if a permission is specifically __Denied__, it will override any permissions that are granted.
 
-Within Share Permissions, click the users or groups added from the second step.
+* Within Share Permissions, click the users or groups added from the second step.
 Using the check boxes, specify what kind of control you would like to give.
+* Click OK. Twice
 
-~~~
-Click OK. Twice
-~~~
 You have now shared a folder with specific permissions.
 ##Secure the Server.
 ###Securing IIS.
@@ -171,10 +169,10 @@ The policies in this section tell the server how to respond to a request for IPS
 
 ###How to define Group Policies:
 To create and modify Group Policies, launch the Group Policy Editor through command line, or as a MMC snap-in. 
-~~~
-Click Start, type gpedit.msc in the Start Search and press Enter.
-Hold the Start key + R, type gpedit.msc and press Enter.
-~~~
+
+* Click Start, type gpedit.msc in the Start Search and press Enter.
+* Hold the Start key + R, type gpedit.msc and press Enter.
+
 Depending on what you would like defined, browse through the "Folders" on the left navigation bar.
 
 For example, to enable Roaming Profiles in Group Policy, you would go to: 
@@ -185,13 +183,3 @@ Set roaming profile path for all users logging onto this computer
 ~~~
 
 Good Luck!
-
-
-
-
-
-
-
-
-
-.
