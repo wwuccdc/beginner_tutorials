@@ -1,3 +1,4 @@
+<!--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/.-->
 #Routers and Firewalls [ETC: 1.5 Hours]
 This section will be about configuring a router to correctly forward data and creating a ruleset to be deployed on a firewall or router that will protect the network.
 
