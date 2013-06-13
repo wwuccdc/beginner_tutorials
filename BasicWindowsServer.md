@@ -1,3 +1,4 @@
+<!--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/.-->
 #Windows Server [ETC: 45 minutes]
 In this example we will be talking about Windows Server 2008 R3 but the neccesary steps to harden any windows servers will be similar.
 
