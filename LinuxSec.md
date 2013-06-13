@@ -17,8 +17,6 @@ Learn more about why the shadow copyies exist [here](http://en.wikipedia.org/wik
 
 ##Groups
 In addition to assigned permissions based on users, unix systems can assign permissions based on groups which apply to all members of the group.
-%%%%%% Include more info, such as example groups Sudoers, etc.
-%%%%%% Including info on how to remove, add to sudoers is also nice. maybe just a link would be okay? You decide. Wait, does sudoers even count as a group?
 ####Group Information
 Group information is stored in
 ~~~
@@ -140,6 +138,3 @@ This is very specific to this system. Typically a key based approach will actual
 ##Exercise
 __Todo__
 Log in with provided (download through web vuln) public authentication key even though there is no known user. Then secure ssh to prevent this from happening.
-
-%%%%%% %%%%%% Will there be a section on kerberos?
-.
