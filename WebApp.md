@@ -1,3 +1,4 @@
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/. -->
 #WebApp Vulnerabilities [ETC: 1.0 Hours]
 This section will be about web app vulnerabilities. In this context we will often be talking about php code but there's no reason that other web scripting languages are any more secure.
 
