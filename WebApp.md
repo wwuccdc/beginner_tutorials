@@ -7,6 +7,7 @@ Sometimes bad coding can lead to exploits that allow execution of arbitrary code
 * Running __eval()__ on unsantized user input
 can allow remote execution vulnerabilities to exist. In the case of eval() this is very simple. Unsanitized input is passed to the server (perhaps in a get or post portion of a website request) and that data is run as a system command. (It could be a command like "rm / -rf"). register_globals is a php setting that, with unsecure coding, can allow a user to manipulate variables in other parts of the php script being run such as replacing an included script source with a remote source that has eval()'s written into it.  
 For example the (awful) code below was pulled directly from a public git repository of a live website:
+
 ~~~
     if($_POST["isadmin"]==1){
         if (isset($_GET["cmd"]){
@@ -30,7 +31,7 @@ SQL Injection is possible when a website submits an SQL query that is created by
         echo "Password Correct!";
     else
         echo "Password Incorrect!";
-~~~~
+~~~
 Supplying the correct username and password will work, but so will SQL injection. Passing both the username and password of:
 ~~~
     ' OR '1'='1
