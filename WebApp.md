@@ -99,12 +99,11 @@ To correct these failures make sure every page that needs to be secure is authen
 ##Exercise
 Start your vm and connect to the following address:
 ~~~
-    http://yourvmip/userlogin
+    http://yourvmip/login
 ~~~
 Attempting to login should present you with an unhandled SQL error.  
 Using the information in this error can you guess which table user information is stored in?  
 Using a technique described above (or one found here: http://www.unixwiz.net/techtips/sql-injection.html) try to bypass the login field.  
 ### Additional exercise
 Now that you can login it is possible to fake a login AND exploit an XSS vulnerability in the page. If you need a hint, look at the output after you login.
-(Clean up this exercise, the output is "Welcome " . $_POST['username'];, should be straightforward)
-.
+
