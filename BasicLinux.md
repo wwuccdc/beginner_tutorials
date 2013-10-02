@@ -1,6 +1,8 @@
 <!--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/.-->
 #Basic Linux [ETC: 20mins]
 ##First Steps
+###Acquiring the virtual machine
+Download the virtualbox disk image (.vdi) from the download link listed in [vminformation](https://github.com/wwuccdc/beginner_tutorials/blob/master/vminformation)
 ###Logging in
 You should be prompted for a username and password. In our example the username is ccdcscrub and the password is rmrfuw
 ###The Shell
