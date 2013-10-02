@@ -79,7 +79,7 @@ You may find yourself in a place where you don't know how to use a command or ma
 ~~~
 Will give you all possible information about the command entered. If you have forgotten a command like cp, typing:
 ~~~
-    apropros copy
+    apropos copy
 ~~~
 will return man pages that have copy in the header and will help you find the correct command to use.  
 Many of the above commands will only work with sudo when changing important root-owned files
