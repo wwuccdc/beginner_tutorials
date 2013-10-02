@@ -2,7 +2,7 @@
 #Basic Linux [ETC: 20mins]
 ##First Steps
 ###Logging in
-You should be prompted for a username and password. In our example the username is ccdc and the password is cdcc (ccdc reversed)
+You should be prompted for a username and password. In our example the username is ccdc and the password is rmrfuw
 ###The Shell
 When you log in to most linux systems you will be running a program called a shell and located in your home directory (most often /home/<username>)  The specific version of this shell isn't very important to us yet but it's most likely BASH (Bourne Again SHell) The shell is a program that helps you run other programs through a command line interface. It has various built in functions that allow you to do things like run programs in the background and navigate the file system.
 ###Navigating the linux file system
