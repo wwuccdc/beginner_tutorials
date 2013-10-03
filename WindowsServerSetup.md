@@ -1,7 +1,7 @@
 <!--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/.-->
 #Windows Server[ETC: 2.5 Hours]
 ###Acquiring the virtual machine
-Download the virtualbox disk image (.vdi) from the download link listed in [vminformation](https://github.com/wwuccdc/beginner_tutorials/blob/master/vminformation)
+Download the virtualbox disk image (.vdi) from the download link listed in [vminformation](https://github.com/wwuccdc/beginner_tutorials/blob/master/vminformation.md)
 ##Introduction
 ###Overview
 In this module, you will learn how to setup active directory, remote authentication, IIS, File sharing and remote access on Windows Server 2008, 2008 R2 or 2012. The virtual machines for the tutorials will be running Windows Server 2008 R2. Changes in Windows Server 2012 for installation are mostly graphical updates and simplification. Steps should mostly be the same. Unlike the previous modules where you are provided with a single VM training section, this entire module is to set-up and get you familiar with the VM. Please get the VM ready before procceding.
