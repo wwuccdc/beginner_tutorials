@@ -3,7 +3,8 @@
 In this example we will be talking about Windows Server 2008 R3 but the neccesary steps to harden any windows servers will be similar.
 
 This tutorial assumes basic understanding of Windows operating systems. 
-
+###Acquiring the virtual machine
+Download the virtualbox disk image (.vdi) from the download link listed in [vminformation](https://github.com/wwuccdc/beginner_tutorials/blob/master/vminformation.md)
 ##Automatic Updates
 Probably the single most important part of securing a windows server setup is updating the to most recent patches. Windows Update can be configured and started by going to:
 ~~~
