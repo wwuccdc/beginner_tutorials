@@ -1,9 +1,9 @@
 <!--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/.-->
-#Intrusion Detection [ETC: 45 Minutes]
-##Introduction
-###Overview
+# Intrusion Detection [ETC: 45 Minutes]
+## Introduction
+### Overview
 In this module, we will be learning and using Snort, a free an open source network intrusion prevention system and network intrusion detection system. The set-up of snort is difficult and you should have a good understanding of linux package installations, file locations, etc. before you begin.
-###Getting Started
+### Getting Started
 Download the latest Snort from [Snort Website](http://www.snort.org/snort-downloads). Extract the Snort Source Code to the /usr/src directory.
 ~~~
 # cd /usr/src
@@ -12,11 +12,11 @@ Download the latest Snort from [Snort Website](http://www.snort.org/snort-downlo
 ~~~
 Note that the version and link might change. Check the website to be certain.
 
-####Installing Snort
+#### Installing Snort
 Snort requires the dev packages libpcap and libpcre. Make sure you have them.
 ~~~
-#apt-cache policy libpcap0.8-dev
-#apt-cache policy libpcre3-dev
+# apt-cache policy libpcap0.8-dev
+# apt-cache policy libpcre3-dev
 ~~~
 If the packages aren't installed, please install them.
 
@@ -108,6 +108,3 @@ To make Snort run as a Daemon, add -D parameter.
 
 While Snort itself will not automatically block intrusions, plugins are avaliable to do so. Please note that setting up rules and such will take hours and is a delicate task.
 You can learn more about the SnortSAM plugin [here](http://www.snortsam.net/).
-
-
-
